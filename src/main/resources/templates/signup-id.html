@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+<h1>회원 가입</h1>
+<hr>
+
+<form method="post" th:action="@{/user/signup/email}" th:object="${member}">
+<!--    <p th:if="${#fields.hasErrors('name')}">이미 있는 이메일입니다.</p>-->
+    <input type="text" name="email" placeholder="이메일 입력해주세요" th:field="*{email}">
+    <button type="submit">확인</button>
+</form>
+</body>
+</html>
